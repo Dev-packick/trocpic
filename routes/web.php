@@ -39,14 +39,13 @@ Route::middleware('auth', 'verified', 'CacheControl')->group(function(){
     //Tableau de bord
     Route::get('/tableau', [AdminController::class, 'tab'])->name('TABLEAU');
     //Profil utilisateur
-    Route::get('/profil', [AdminController::class, 'profil'])->name('profil');
+    Route::get('/profil', [AuthController::class, 'show'])->name('profil');
     //Rechercher catégorie
     Route::get('/search-result', [AdminController::class, 'searchresult'])->name('recherche');
     //Messagerie
     Route::get('/messagerie', [AdminController::class, 'messagerie'])->name('messagerie');
     //Galerie images
     Route::get('/gallery', [AdminController::class, 'gallery'])->name('images');
-    Route::get('/classement', [AdminController::class, 'classement'])->name('evaluation');
     Route::get('/maps', [AdminController::class, 'maps'])->name('maps');
     //Publié Troc
     Route::get('/publication', [ClientController::class, 'add'])->name("PUBLICATION");
@@ -56,4 +55,5 @@ Route::middleware('auth', 'verified', 'CacheControl')->group(function(){
     Route::put('/utilisateurs/{id}', [ClientController::class, 'update'])->name('updateTroc');
     // Routes Afficher et accéder a la page d'affichage Troc
     Route::get('/utilisateurs', [ClientController::class, 'show'])->name("SERVICES");
+
 });

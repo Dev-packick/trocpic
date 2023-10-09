@@ -10,9 +10,7 @@ class AdminController extends Controller
     public function tab(){
         return view('admin.tableau');
     }
-    public function profil(){
-        return view('admin.profil');
-    }
+    
     // public function publication(){
     //     return view('admin.publication');
     // }
