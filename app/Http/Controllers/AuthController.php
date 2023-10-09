@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
+
+
 class AuthController extends Controller
 {
     public function inscription(request $request)
@@ -21,7 +23,15 @@ class AuthController extends Controller
     {
         return view('auth.connexion');
     }
+    public function profil(){
+        return view('admin.profil');
+    }
 
+    // Accéder a la page d'affichage du profil
+    public function show(){
+        $user  = User::all();
+        return view('admin.profil', compact('user'));
+    }
 
     /*VALIDER LA REQUETE INSCRIPTION*/
     public function create(request $request)
@@ -80,3 +90,5 @@ class AuthController extends Controller
     }
 
 }
+
+

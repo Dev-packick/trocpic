@@ -55,7 +55,8 @@
                                 <span class="project-date" style="color: #ffb600;">{{ $troc->date }}</span>
                             </div>
                             <button class="btn btn-primary" data-toggle="modal" data-target="#messageModal" data-image="{{ asset('/articlesImages/' . $troc->image) }}" style="margin-top:-10px;">
-                                <i class="fa fa-envelope"></i>
+                                {{-- <i class="fa fa-envelope"></i> --}}
+                                Message
                             </button>
                         </div>
                     </div>

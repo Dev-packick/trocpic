@@ -32,6 +32,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="contact-h-cont">
+
                     <form action="{{ route('NEWUSER') }}" method="POST" class="form-horizontal">
                         @method('POST')
                         @csrf
@@ -138,6 +139,7 @@
 
                         <button class="btn btn-general btn-blue" style="border-bottom-color: limegreen">S'inscrire</button>
                     </form>
+                    
                 </div>
             </div>
         </div>
