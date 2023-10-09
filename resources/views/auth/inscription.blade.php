@@ -94,8 +94,8 @@
                                       <div class="input-group-addon">
                                         <i class="fa fa-phone"></i>
                                       </div>
-                                        <input type="text" class="form-control" id="pseudo" name="pseudo" required>
-                                        <span class="text-danger">@error('pseudo'){{ $message }}@enderror</span>
+                                        <input type="text" class="form-control" id="telephone" name="telephone" required>
+                                        <span class="text-danger">@error('telephone'){{ $message }}@enderror</span>
                                     </div>
                                 </div>
                             </div>

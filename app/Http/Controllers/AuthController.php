@@ -45,8 +45,8 @@ class AuthController extends Controller
         $user->email = $request->email;
         $user->telephone = $request->telephone;
         $user->password = Hash::make($request->password);
-        $query = $user->save();
-        if ($query) {
+         $user->save();
+        if ($user) {
             return redirect()->route('CONNEXION')->with('success', 'Votre formulaire à été enregistré avec succès');
         } else {
             return back()->with('Echec', 'Email ou mot de passe incorrect');
