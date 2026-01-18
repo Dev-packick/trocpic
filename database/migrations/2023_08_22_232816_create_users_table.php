@@ -15,11 +15,12 @@ return new class extends Migration
             $table->id();
             $table->text('nom');
             $table->text('prenom');
-            $table->text('pseudo');
             $table->text('email');
             $table->string('telephone');
             $table->string('adresse');
             $table->text('password');
+            $table->text('role');
+            $table->string('image')->nullable(); // Modifier ici pour rendre la colonne nullable
             $table->timestamps();
         });
     }

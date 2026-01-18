@@ -1,258 +1,153 @@
 @extends('layouts.client')
 @section('content')
 
-<div id="banner-area" class="banner-area" style="background-image:url(images/banner/banner1.jpg)">
-  <div class="banner-text">
-    <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-              <div class="banner-heading">
-                <h1 class="banner-title">About</h1>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb justify-content-center">
-                      <li class="breadcrumb-item"><a href="#">Home</a></li>
-                      <li class="breadcrumb-item"><a href="#">company</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">About Us</li>
-                    </ol>
-                </nav>
-              </div>
-          </div><!-- Col end -->
-        </div><!-- Row end -->
-    </div><!-- Container end -->
-  </div><!-- Banner text end -->
-</div><!-- Banner area end -->
-
-<section id="main-container" class="main-container">
-  <div class="container">
-    <div class="row">
-        <div class="col-lg-6">
-          <h3 class="column-title">Who We Are</h3>
-          <p>when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.</p>
-          <blockquote><p>Semporibus autem quibusdam et aut officiis debitis aut rerum est aut optio cumque nihil necessitatibus autemn ec tincidunt nunc posuere ut</p></blockquote>
-          <p>He lay on his armour-like  back, and if he lifted. ultrices ultrices sapien, nec tincidunt nunc posuere ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing.</p>
-
-        </div><!-- Col end -->
-
-        <div class="col-lg-6 mt-5 mt-lg-0">
-
-          <div id="page-slider" class="page-slider small-bg">
-
-              <div class="item" style="background-image:url(images/slider-pages/slide-page1.jpg)">
-                <div class="container">
-                    <div class="box-slider-content">
-                      <div class="box-slider-text">
-                          <h2 class="box-slide-title">Leadership</h2>
-                      </div>
-                    </div>
-                </div>
-              </div><!-- Item 1 end -->
-
-              <div class="item" style="background-image:url(images/slider-pages/slide-page2.jpg)">
-                <div class="container">
-                    <div class="box-slider-content">
-                      <div class="box-slider-text">
-                          <h2 class="box-slide-title">Relationships</h2>
-                      </div>
-                    </div>
-                </div>
-              </div><!-- Item 1 end -->
-
-              <div class="item" style="background-image:url(images/slider-pages/slide-page3.jpg)">
-                <div class="container">
-                    <div class="box-slider-content">
-                      <div class="box-slider-text">
-                          <h2 class="box-slide-title">Performance</h2>
-                      </div>
-                    </div>
-                </div>
-              </div><!-- Item 1 end -->
-          </div><!-- Page slider end-->
-
-
-        </div><!-- Col end -->
-    </div><!-- Content row end -->
-
-  </div><!-- Container end -->
-</section><!-- Main container end -->
-
-
-<section id="facts" class="facts-area dark-bg">
-  <div class="container">
-    <div class="facts-wrapper">
-        <div class="row">
-          <div class="col-md-3 col-sm-6 ts-facts">
-              <div class="ts-facts-img">
-                <img loading="lazy" src="images/icon-image/fact1.png" alt="facts-img">
-              </div>
-              <div class="ts-facts-content">
-                <h2 class="ts-facts-num"><span class="counterUp" data-count="1789">0</span></h2>
-                <h3 class="ts-facts-title">Total Projects</h3>
-              </div>
-          </div><!-- Col end -->
-
-          <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
-              <div class="ts-facts-img">
-                <img loading="lazy" src="images/icon-image/fact2.png" alt="facts-img">
-              </div>
-              <div class="ts-facts-content">
-                <h2 class="ts-facts-num"><span class="counterUp" data-count="647">0</span></h2>
-                <h3 class="ts-facts-title">Staff Members</h3>
-              </div>
-          </div><!-- Col end -->
-
-          <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
-              <div class="ts-facts-img">
-                <img loading="lazy" src="images/icon-image/fact3.png" alt="facts-img">
-              </div>
-              <div class="ts-facts-content">
-                <h2 class="ts-facts-num"><span class="counterUp" data-count="4000">0</span></h2>
-                <h3 class="ts-facts-title">Hours of Work</h3>
-              </div>
-          </div><!-- Col end -->
-
-          <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
-              <div class="ts-facts-img">
-                <img loading="lazy" src="images/icon-image/fact4.png" alt="facts-img">
-              </div>
-              <div class="ts-facts-content">
-                <h2 class="ts-facts-num"><span class="counterUp" data-count="44">0</span></h2>
-                <h3 class="ts-facts-title">Countries Experience</h3>
-              </div>
-          </div><!-- Col end -->
-
-        </div> <!-- Facts end -->
-    </div>
-    <!--/ Content row end -->
+<!-- BANDE JVE START-->
+<section style="width:100%; background:#111; color:white; padding:40px 10%; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; box-sizing:border-box;">
+  <!-- Image background optionnel -->
+    <!-- Pour un fond avec image floutée, décommente la ligne suivante et adapte le chemin : style="background: linear-gradient(rgba(46,204,113,0.9), rgba(46,204,113,0.9)), url('image-floutee.jpg') center/cover;"-->
+  <div style="flex:1; min-width:300px;">
+    <h2 style="font-size:1.8rem; font-weight:800; margin-bottom:5px; color:#ccc;">🌱 Soutenons Le projet JVE</h2>
+    <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:15px; color:#9be7c4;">Jeunes Volontaires pour l’Environnement</h3>
+    <p style="font-size:1rem; line-height:1.6; max-width:600px; margin:0; color:#ccc;">
+      Ensemble, agissons pour la protection de l’environnement, la reforestation et la transition écologique.
+    </p>
   </div>
-  <!--/ Container end -->
-</section><!-- Facts end -->
+  <div style="flex-shrink:0;">
+      <a href="https://jveinternational.org" target="_blank"
+         style="background:#484c4c; color:white; text-decoration:none; font-weight:bold; padding:10px 20px; border-radius:6px; transition:0.4s ease; display:inline-block;" onmouseover="this.style.background='#484c4c'; this.style.transform='scale(1.05)';" onmouseout="this.style.background='#484c4c'; this.style.transform='scale(1)';">
+        Participer au Crowdfunding →
+      </a>
+  </div>
+</section>
+<!-- BANDE JVE END-->
 
-<section id="ts-team" class="ts-team">
-  <div class="container">
-    <div class="row text-center">
-        <div class="col-lg-12">
-          <h2 class="section-title">Quality Service</h2>
-          <h3 class="section-sub-title">Professional Team</h3>
-        </div>
-    </div><!--/ Title row end -->
 
+<!-- START ASSOCIATIONS -->
+<div class="container my-5">
+ <h1 class="text-center">Faites un don à une structure solidaire</h2>
+   <p class="text-center mb-5" style="font-size:initial">Soutenez les associations qui œuvrent chaque jour pour un Togo plus durable et solidaire 🌍</p>
     <div class="row">
-        <div class="col-lg-12">
-          <div id="team-slide" class="team-slide">
-              <div class="item">
-                <div class="ts-team-wrapper">
-                    <div class="team-img-wrapper">
-                      <img loading="lazy" class="w-100" src="images/team/team1.jpg" alt="team-img">
-                    </div>
-                    <div class="ts-team-content">
-                      <h3 class="ts-name">Nats Stenman</h3>
-                      <p class="ts-designation">Chief Operating Officer</p>
-                      <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
-                          <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
-                    </div>
-                </div><!--/ Team wrapper end -->
-              </div><!-- Team 1 end -->
 
-              <div class="item">
-                <div class="ts-team-wrapper">
-                    <div class="team-img-wrapper">
-                      <img loading="lazy" class="w-100" src="images/team/team2.jpg" alt="team-img">
-                    </div>
-                    <div class="ts-team-content">
-                      <h3 class="ts-name">Angela Lyouer</h3>
-                      <p class="ts-designation">Innovation Officer</p>
-                      <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
-                          <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
-                    </div>
-                </div><!--/ Team wrapper end -->
-              </div><!-- Team 2 end -->
-
-              <div class="item">
-                <div class="ts-team-wrapper">
-                    <div class="team-img-wrapper">
-                      <img loading="lazy" class="w-100" src="images/team/team3.jpg" alt="team-img">
-                    </div>
-                    <div class="ts-team-content">
-                      <h3 class="ts-name">Mark Conter</h3>
-                      <p class="ts-designation">Safety Officer</p>
-                      <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
-                          <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
-                    </div>
-                </div><!--/ Team wrapper end -->
-              </div><!-- Team 3 end -->
-
-              <div class="item">
-                <div class="ts-team-wrapper">
-                    <div class="team-img-wrapper">
-                      <img loading="lazy" class="w-100" src="images/team/team4.jpg" alt="team-img">
-                    </div>
-                    <div class="ts-team-content">
-                      <h3 class="ts-name">Ayesha Stewart</h3>
-                      <p class="ts-designation">Finance Officer</p>
-                      <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
-                          <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
-                    </div>
-                </div><!--/ Team wrapper end -->
-              </div><!-- Team 4 end -->
-
-              <div class="item">
-                <div class="ts-team-wrapper">
-                    <div class="team-img-wrapper">
-                      <img loading="lazy" class="w-100" src="images/team/team5.jpg" alt="team-img">
-                    </div>
-                    <div class="ts-team-content">
-                      <h3 class="ts-name">Dave Clarkte</h3>
-                      <p class="ts-designation">Civil Engineer</p>
-                      <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
-                          <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
-                    </div>
-                </div><!--/ Team wrapper end -->
-              </div><!-- Team 5 end -->
-
-              <div class="item">
-                <div class="ts-team-wrapper">
-                    <div class="team-img-wrapper">
-                      <img loading="lazy" class="w-100" src="images/team/team6.jpg" alt="team-img">
-                    </div>
-                    <div class="ts-team-content">
-                      <h3 class="ts-name">Elton Joe</h3>
-                      <p class="ts-designation">Site Supervisor</p>
-                      <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
-                      <div class="team-social-icons">
-                          <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
-                          <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
-                      </div><!--/ social-icons-->
-                    </div>
-                </div><!--/ Team wrapper end -->
-              </div><!-- Team 6 end -->
-
-          </div><!-- Team slide end -->
+        <!-- Carte 1 -->
+        <div class="col-md-6 col-lg-3 mb-4 d-flex align-items-stretch">
+            <div class="card shadow-sm h-100">
+                <img src="{{asset('client/images/PA3.jpg')}}" class="card-img-top" alt="Orphelinat Mother Charity" style="height: 180px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Orphelinat Mother Charity</h5>
+                    <h6 style="color:red;">Région maritime</h6>
+                    <p class="card-text flex-grow-1">Accueille des enfants orphelins ou abandonnés, leur offrant un cadre familial, une éducation de base et un accompagnement vers une vie meilleure.</p>
+                    <a href="https://wa.me/22899442289" target="_blank" class="btn btn-success mt-2">WhatsApp</a>
+                    <a href="https://mivamiadjo.wixsite.com/mivamiadjo/orphelinat-mother charity" target="_blank" class="btn btn-primary mt-2" style="background-color:black;">Site Web</a>
+                </div>
+            </div>
         </div>
-    </div><!--/ Content row end -->
-  </div><!--/ Container end -->
-</section><!--/ Team end -->
+
+        <!-- Carte 2 -->
+        <div class="col-md-6 col-lg-3 mb-4 d-flex align-items-stretch">
+            <div class="card shadow-sm h-100">
+                <img src="{{asset('client/images/user4.png')}}" class="card-img-top" alt="Foyer Pierre du Pauvre" style="height: 180px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Foyer Pierre du Pauvre</h5>
+                    <h6 style="color:red;">Région de la Kara</h6>
+                    <p class="card-text flex-grow-1">Soutient les jeunes en situation difficile à travers un hébergement stable, des formations pratiques et un appui à la réinsertion sociale et professionnelle.</p>
+                    <a href="https://wa.me/22890991575" target="_blank" class="btn btn-success mt-2">WhatsApp</a>
+                    <a href="https://chenedemambre.fr/le-togo" target="_blank" class="btn btn-primary mt-2" style="background-color:black;">Site Web</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 3 -->
+        <div class="col-md-6 col-lg-3 mb-4 d-flex align-items-stretch">
+            <div class="card shadow-sm h-100">
+                <img src="{{asset('client/images/APVTOGOLOGO.png')}}" class="card-img-top" alt="APV-Togo" style="height: 180px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">APV-Togo</h5>
+                    <h6 style="color:red;">Région maritime</h6>
+                    <p class="card-text flex-grow-1">Œuvre pour la protection de l’environnement à travers le recyclage, l’éducation écologique et la promotion de l’économie circulaire dans les quartiers urbains.</p>
+                    <a href="https://wa.me/22892939310" target="_blank" class="btn btn-success mt-2">WhatsApp</a>
+                    <a href="https://www.apv-togo.org" target="_blank" class="btn btn-primary mt-2" style="background-color:black;">Site Web</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 4 -->
+        <div class="col-md-6 col-lg-3 mb-4 d-flex align-items-stretch">
+            <div class="card shadow-sm h-100">
+                <img src="{{asset('client/images/VDE.png')}}" class="card-img-top" alt="Association Vivre dans l’Espérance" style="height: 180px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Association Vivre dans l’Espérance</h5>
+                    <h6 style="color:red;">Région des savanes</h6>
+                    <p class="card-text flex-grow-1">Accompagne les enfants orphelins et les familles touchées par le VIH, en leur fournissant soins, éducation et encadrement psychosocial.</p>
+                    <a href="https://wa.me/22890772231" target="_blank" class="btn btn-success mt-2">WhatsApp</a>
+                    <a href="https://vivredanslesperance.org/" target="_blank" class="btn btn-primary mt-2" style="background-color:black;">Site Web</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 5 -->
+        <div class="col-md-6 col-lg-3 mb-4 d-flex align-items-stretch">
+            <div class="card shadow-sm h-100">
+                <img src="{{asset('client/images/user4.png')}}" class="card-img-top" alt="Centre Amis des Enfants (ADED)" style="height: 180px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Centre de développement Amis des enfants</h5>
+                    <h6 style="color:red;">Région de la Kara</h6>
+                    <p class="card-text flex-grow-1">Aide les enfants vulnérables par des actions éducatives, sanitaires et sociales, afin de garantir leur épanouissement et leur insertion dans la société.</p>
+                    <a href="https://wa.me/22893890100" target="_blank" class="btn btn-success mt-2">WhatsApp</a>
+                    <a href="https://www.facebook.com/profile.php?id=61568958366675&mibextid=rS40aB7S9Ucbxw6v." target="_blank" class="btn btn-primary mt-2" style="background-color:blue;">Facebook</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 6 -->
+        <div class="col-md-6 col-lg-3 mb-4 d-flex align-items-stretch">
+            <div class="card shadow-sm h-100">
+                <img src="{{asset('client/images/VJ.jpg')}}" class="card-img-top" alt="Association EBE" style="height: 180px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Association EBE - Ensemble pour le Bien-être de l'Enfant</h5>
+                    <h6 style="color:red;">Région des plateaux</h6>
+                    <p class="card-text flex-grow-1">Propose des activités de formation, de soutien psychosocial et d’insertion pour les jeunes en situation de vulnérabilité ou d’exclusion sociale.</p>
+                    <a href="https://wa.me/22891950403" target="_blank" class="btn btn-success mt-2">WhatsApp</a>
+                    <a href="https://www.villagedelajoietogo.org/" target="_blank" class="btn btn-primary mt-2" style="background-color:black;">Site Web</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 7 -->
+        <div class="col-md-6 col-lg-3 mb-4 d-flex align-items-stretch">
+            <div class="card shadow-sm h-100">
+                <img src="{{asset('client/images/YD.jpg')}}" class="card-img-top" alt="Association AVEA Togo" style="height: 180px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Orphelinat Yendoubouame N'Tien</h5>
+                    <h6 style="color:red;">Région des savanes</h6>
+                    <p class="card-text flex-grow-1">Offre un cadre de vie sécurisé et éducatif aux enfants abandonnés ou défavorisés pour favoriser leur bien-être et leur avenir.</p>
+                    <a href="https://wa.me/22890179105" target="_blank" class="btn btn-success mt-2">WhatsApp</a>
+                    <a href="https://www.yendouboame.com/" target="_blank" class="btn btn-primary mt-2" style="background-color:black;">Site Web</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 8 -->
+        <div class="col-md-6 col-lg-3 mb-4 d-flex align-items-stretch">
+            <div class="card shadow-sm h-100">
+                <img src="{{asset('client/images/AVE.png')}}" class="card-img-top" alt="Association des Bègues du Togo" style="height: 180px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">ONG AVE Togo</h5>
+                    <h6 style="color:red;">Région centrale</h6>
+                    <p class="card-text flex-grow-1">Soutient les femmes en situation de précarité et les familles monoparentales, en leur offrant formation, accompagnement et appui à l’autonomie.</p>
+                    <a href="#" target="_blank" class="btn btn-success mt-2">WhatsApp</a>
+                    <a href="https://ave4kids.ch" target="_blank" class="btn btn-primary mt-2" style="background-color:black;">Site Web</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- END ASSOCIATIONS -->
+
+<!-- FOOTER -->
+<footer style="background:#28A745; color:white; text-align:center; padding:50px 20px; font-size:1rem;">
+  © 2025 Tropic | Chaque don compte. Ensemble, faisons pousser l’espoir 🌿
+</footer>
+
+
 @endsection

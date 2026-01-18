@@ -75,7 +75,7 @@
               </div>
             </div>
               <div class="form-group" style="width: 100%;">
-                <button type="submit" style="background-color: #007bff; color: #fff; padding: 10px 20px; border: none; border-radius: 3px; font-size: 18px; cursor: pointer; transition: background-color 0.3s; width: 100%;">Soumettre</button>
+                <button type="submit" href="{{route('CONNEXION')}}" style="background-color: #007bff; color: #fff; padding: 10px 20px; border: none; border-radius: 3px; font-size: 18px; cursor: pointer; transition: background-color 0.3s; width: 100%;">Soumettre</button>
               </div>
             </div>
 

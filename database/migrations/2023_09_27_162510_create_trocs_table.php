@@ -16,10 +16,12 @@ return new class extends Migration
             $table->string('nom');
             $table->string('adresse');
             $table->string('description');
-            $table->date('date');
             $table->string('typeTroc');
             $table->string('image');
             $table->timestamps();
+            $table->integer('user_id');
+
+
         });
     }
 

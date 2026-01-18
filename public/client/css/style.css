@@ -1,8 +1,8 @@
 /*!------------------------------------------------------------------
 [MAIN STYLESHEET]
 
-Template Name: DealApp
-Description: DealApp
+Template Name: Troc-Pic
+Description: Troc-Pic
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
 [TABLE OF CONTENTS]
@@ -370,12 +370,12 @@ blockquote {
   margin: 20px 0;
   background: #f9f9f9;
   position: relative;
-  border-left: 3px solid #ffb600;
+  border-left: 3px solid #218838;
   padding-left: 40px;
 }
 
 blockquote.text-center {
-  border-top: 3px solid #ffb600;
+  border-top: 3px solid #218838;
   border-left: 0;
   padding-left: 25px;
   padding-top: 50px;
@@ -389,7 +389,7 @@ blockquote.text-center:before {
 }
 
 blockquote.text-right {
-  border-right: 3px solid #ffb600;
+  border-right: 3px solid #218838;
   padding-right: 40px;
   border-left: 0;
   padding-left: 25px;
@@ -519,11 +519,11 @@ a[href^=tel] {
 
 .btn-white.btn-primary {
   background: #fff;
-  color: #ffb600;
+  color: #28A745;
 }
 
 .btn-primary {
-  background: #ffb600;
+  background: #28A745;
 }
 
 .btn-dark {
@@ -877,7 +877,7 @@ ul.top-info-box > li.nav-search i {
   padding: 6px;
   border-radius: 0;
   font-size: 1rem;
-  background: #ffb600;
+  background: #28A745;
 }
 
 .navbar-toggler:focus {
@@ -891,7 +891,7 @@ ul.top-info-box > li.nav-search i {
 
 ul.navbar-nav > li:hover > a,
 ul.navbar-nav > li.active > a {
-  color: #ffb600;
+  color: #28A745;
   position: relative;
 }
 
@@ -1037,7 +1037,7 @@ ul.navbar-nav > li > a {
 }
 
 .dropdown-menu-large > li > ul > li.active > a {
-  color: #ffb600 !important;
+  color: #28A745 !important;
 }
 
 .navbar-nav > li > .dropdown-menu a {
@@ -1264,7 +1264,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .slide-title-box {
   font-size: 16px;
   line-height: 39px;
-  background: #ffb600;
+  background: #28A745;
   color: #fff;
   display: inline-block;
   padding: 0 15px;
@@ -1360,11 +1360,11 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 .slider.border {
   background: none;
-  border: 2px solid #ffb600 !important;
+  border: 2px solid #28A745 !important;
 }
 
 .slider.border:hover {
-  background: #ffb600;
+  background: #28A745;
   border: 2px solid transparent;
 }
 
@@ -1405,7 +1405,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .slick-dots li button:hover:before, .slick-dots .slick-dots li button:focus:before,
 .slick-dots li.slick-active button:before {
   opacity: 1;
-  color: #ffb600;
+  color: #28A745;
 }
 
 .slick-slide {
@@ -1439,7 +1439,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .banner-carousel .carousel-control i:hover {
-  background: #ffb600;
+  background: #28A745;
   color: #fff;
 }
 
@@ -1542,7 +1542,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .call-to-action-box .action-style-box {
-  background: #ffb600;
+  background: #28A745;
   padding: 30px;
 }
 
@@ -1694,7 +1694,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 .ts-facts .ts-facts-content .ts-facts-title {
   font-size: 16px;
-  color: #ffb600;
+  color: #28A745;
   margin: 0;
 }
 
@@ -1704,7 +1704,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .ts-service-box .ts-service-icon i {
   font-size: 36px;
   float: left;
-  color: #ffb600;
+  color: #28A745;
 }
 
 .ts-service-box .ts-service-box-content {
@@ -1806,7 +1806,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .ts-service-icon.icon-round i {
   font-size: 24px;
   color: #fff;
-  background: #ffb600;
+  background: #28A745;
   text-align: center;
   border-radius: 100%;
   width: 60px;
@@ -1882,7 +1882,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   font-size: 24px;
   float: left;
   color: #fff;
-  background: #ffb600;
+  background: #28A745;
   border-radius: 100%;
   width: 60px;
   height: 60px;
@@ -1896,7 +1896,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .ts-service-classic:hover .ts-service-icon i {
-  background: #ffb600;
+  background: #28A745;
 }
 
 /* Projects area
@@ -2161,12 +2161,12 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .accordion-group .card-header .btn[aria-expanded="true"] {
-  color: #ffb600;
+  color: #28A745;
 }
 
 .accordion-group .card-header .btn[aria-expanded="true"]::before {
   content: "\f106";
-  background-color: #ffb600;
+  background-color: #28A745;
 }
 
 .accordion-group.accordion-classic .card-header .btn:before {
@@ -2197,7 +2197,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 ================================================== */
 .testimonial-area {
   padding: 100px 0;
-  background-color: #ffb600;
+  background-color: #28A745;
   background-image: url(../images/parallax2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -2234,7 +2234,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   left: 0;
   top: 0;
   font-weight: 700;
-  color: #ffc009;
+  color: #28A745;
 }
 
 .testimonial-slide .slick-dots {
@@ -2259,7 +2259,7 @@ img.testimonial-thumb {
   margin: 0 0 2px;
   font-weight: 700;
   display: block;
-  color: #ffb600;
+  color: #28A745;
 }
 
 .quote-item-footer {
@@ -2275,7 +2275,7 @@ img.testimonial-thumb {
 
 /* Testimonial Border */
 .quote-item.quote-border .quote-text-border {
-  border: 1px solid #ffb600;
+  border: 1px solid #28A745;
   padding: 20px;
   position: relative;
   line-height: 28px;
@@ -2287,7 +2287,7 @@ img.testimonial-thumb {
 .quote-item.quote-border .quote-text-border:before {
   border: 12px solid;
   border-color: #e1e1e1 transparent transparent;
-  border-top-color: #ffb600;
+  border-top-color: #27A745;
   bottom: -24px;
   position: absolute;
   content: "";
@@ -2331,7 +2331,7 @@ img.testimonial-thumb {
 /* Subscribe area
 ================================================== */
 .subscribe {
-  background: #ffb600;
+  background: #28A745;
   padding: 0;
 }
 
@@ -2456,7 +2456,7 @@ img.testimonial-thumb {
   padding-left: 15px;
   text-transform: uppercase;
   color: #fff;
-  border-left: 3px solid #ffb600;
+  border-left: 3px solid #28A745;
 }
 
 /* Footer about us */
@@ -2528,7 +2528,7 @@ img.testimonial-thumb {
 
 /*-- Copyright --*/
 .copyright {
-  background: #ffb600;
+  background: #28A745;
   color: #111;
   padding: 25px 0;
   position: relative;
@@ -2581,7 +2581,7 @@ img.testimonial-thumb {
   line-height: 36px;
   background: rgba(0, 0, 0, 0.9);
   border-radius: 3px;
-  color: #ffb600;
+  color: #28A745;
   font-weight: 700;
   font-size: 16px;
   padding: 0;
@@ -2686,44 +2686,6 @@ img.testimonial-thumb {
   padding: 0;
   outline: 0;
   border: 0;
-}
-
-.page-slider .carousel-control.left {
-  left: 0;
-}
-
-.page-slider .carousel-control.right {
-  right: 0;
-}
-
-.page-slider .carousel-control i {
-  background: rgba(0, 0, 0, 0.3);
-  color: #fff;
-  line-height: 70px;
-  width: 40px;
-  height: 70px;
-  font-size: 22px;
-  border-radius: 0;
-  transition: all 500ms ease;
-}
-
-.page-slider .carousel-control i:hover {
-  background: #ffb600;
-  color: #fff;
-}
-
-.page-slider.small-bg .item {
-  min-height: 330px;
-  background-size: cover;
-}
-
-.page-slider.small-bg .box-slider-content {
-  left: 20%;
-}
-
-.page-slider.small-bg .box-slider-text {
-  background: rgba(0, 0, 0, 0.55);
-  padding: 5px 20px;
 }
 
 .page-slider.small-bg .box-slide-title {

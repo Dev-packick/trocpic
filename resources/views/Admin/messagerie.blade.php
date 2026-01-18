@@ -1,130 +1,163 @@
 @extends('layouts.admin')
+
 @section('content')
-<!--====================================================
-                        PAGE CONTENT
-======================================================-->
-    <div class="content-inner calendar-cont">
+<div class="content-inner chart-cont" style="padding: 30px; font-family: 'Segoe UI', sans-serif; background-color: #f1f5f9;">
+    <div class="main-content">
+        <div class="page-content">
+            <div class="container-fluid">
 
-            <!--***** MAILBOX *****-->
-            <div class="row" id="emails-cont">
-                <div class="mail-box">
-                    <aside class="sm-side">
-                        <div class="inbox-body">
-                            <a href="#myModal" data-toggle="modal" title="Compose" class="btn btn-compose">Envoyer un message</a>
-                            <!-- Modal -->
-                            <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade" style="display: none;">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
-                                            <h4 class="modal-title">Nouveau message</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form role="form" class="form-horizontal">
-                                                <div class="row form-group">
-                                                    <label class="col-lg-2 control-label">Envoyé à</label>
-                                                    <div class="col-lg-10">
-                                                        <input type="text" placeholder="" id="inputEmail1" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="row form-group">
-                                                    <label class="col-lg-2 control-label">Adresse</label>
-                                                    <div class="col-lg-10">
-                                                        <input type="text" placeholder="" id="cc" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="row form-group">
-                                                    <label class="col-lg-2 control-label">Sujet</label>
-                                                    <div class="col-lg-10">
-                                                        <input type="text" placeholder="" id="inputPassword1" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="row form-group">
-                                                    <label class="col-lg-2 control-label">Message</label>
-                                                    <div class="col-lg-10">
-                                                        <textarea rows="10" cols="30" class="form-control" id="" name=""></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="row form-group">
-                                                    <div class="offset-lg-2 col-lg-10">
-                                                        <span class="btn green fileinput-button">
-                                                        <i class="fa fa-plus fa fa-white"></i>
-                                                        <span>Fichier</span>
-                                                        <input type="file" name="files[]" multiple="">
-                                                        </span>
-                                                        <button class="btn btn-send ml-3" type="submit">Envoyer</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <!-- /.modal-content -->
+                <!--@if(session('success'))-->
+                <!--<div style="background-color: #d1fae5; border-left: 5px solid #10b981; color: #065f46; padding: 12px 16px; border-radius: 6px; margin-bottom: 20px;">-->
+                <!--    {{ session('success') }}-->
+                <!--</div>-->
+                <!--@endif-->
+
+                <h1 style="font-size: 28px; color: #1f2937; margin-bottom: 20px;">Mes messages</h1>
+
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                    @foreach ($messages as $message)
+                    <div style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; background-color: #ffffff;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: flex; gap: 12px; align-items: center;">
+                                <img src="{{ asset('client/images/user1.png') }}" style="width: 50px; height: 50px; border-radius: 50%;">
+                                <div>
+                                    <strong>{{ $message->sender->nom }}</strong><br>
+                                    <small style="color: #6b7280;">{{ $message->created_at->translatedFormat('d F Y à H:i') }}</small>
                                 </div>
-                                <!-- /.modal-dialog -->
                             </div>
-                            <!-- /.modal -->
+                            <form action="{{ route('deleteMessage', $message->id) }}" method="POST" class="delete-message-form">
+                                @csrf
+                                @method('DELETE')
+                                <button style="border: none; background: none;"><i class="fa fa-trash" style="color: #dc2626;"></i></button>
+                            </form>
                         </div>
-                        <ul class="inbox-nav inbox-divider">
-                            <li class="active">
-                                <a href="#"><i class="fa fa-inbox"></i> Boite réception <span class="label label-danger pull-right">2</span></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-envelope-o"></i> Message envoyé</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class=" fa fa-trash-o"></i> Corbeille</a>
-                            </li>
-                        </ul>
-                    </aside>
-                    <aside class="lg-side">
-                        <div class="inbox-body">
-                            <div class="mail-option">
-                                <div class="btn-group hidden-phone">
-                                    <a data-toggle="dropdown" href="#" class="btn mini blue" aria-expanded="false">
-                                         <input type="checkbox" class="mail-checkbox mail-group-checkbox"> Tous
-                                         <i class="fa fa-angle-down "></i>
-                                     </a>
-                                    <ul class="dropdown-menu drop-inbox">
-                                        <li><a href="#"><i class="fa fa-pencil"></i> Tous</a></li>
-                                        <li><a href="#"><i class="fa fa-ban"></i> Aucun</a></li>
-                                        <li><a href="#"><i class="fa fa-book"></i> Lus</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#"><i class="fa fa-trash-o"></i> Non lus</a></li>
-                                    </ul>
-                                </div>
-                                <div class="btn-group">
-                                    <a data-original-title="Refresh" data-placement="top" data-toggle="dropdown" href="#" class="btn mini tooltips">
-                                     <i class=" fa fa-refresh"></i>
-                                 </a>
-                                </div>
-                                <ul class="unstyled inbox-pagination">
-                                    <li><span>1-50 sur 250</span></li>
-                                    <li>
-                                        <a class="np-btn" href="#"><i class="fa fa-angle-left  pagination-left"></i></a>
-                                    </li>
-                                    <li>
-                                        <a class="np-btn" href="#"><i class="fa fa-angle-right pagination-right"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <table class="table table-inbox table-hover">
-                                <tbody>
-                                    <tr class="unread">
-                                        <td class="inbox-small-cells">
-                                            <input type="checkbox" class="mail-checkbox">
-                                        </td>
-                                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                                        <td class="view-message dont-show">Nom de l'utilisateur </td>
-                                        <td class="view-message">Improve the search presence of WebSite</td>
-                                        <td class="view-message inbox-small-cells"></td>
-                                        <td class="view-message text-right">March 18</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </aside>
+                        <p style="margin-top: 10px;">{{ $message->message }}</p>
+
+                        <button type="button" class="view-message-btn btn btn-outline-primary mt-2"
+                            data-message="{{ $message->message }}"
+                            data-sender-id="{{ $message->sender->id }}"
+                            data-troc-id="{{ $message->troc_id }}">
+                            Répondre
+                        </button>
+                    </div>
+                    @endforeach
                 </div>
-            </div>
 
+                <!-- Modal personnalisé -->
+                <div id="messageModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.4); justify-content: center; align-items: center; z-index: 1000; padding: 20px; box-sizing: border-box;">
+                    <div style="background: white; border-radius: 12px; padding: 24px; width: 100%; max-width: 600px; box-sizing: border-box;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                            <h5 style="margin: 0; color: #111827;">Répondre au message</h5>
+                            <button id="closeModal" style="background: none; border: none; font-size: 24px; cursor: pointer; color: #6b7280;">&times;</button>
+                        </div>
+                        <form id="replyForm" method="POST" action="{{ route('repondreMessage') }}">
+                            @csrf
+                            <input type="hidden" name="recever_id" id="replyReceiverId" value="">
+                            <input type="hidden" name="troc_id" id="replyTrocId" value="">
+                            <textarea name="message" rows="4" required style="width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; margin-bottom: 16px;" placeholder="Écrivez votre réponse ici..."></textarea>
+                            <button type="submit" style="background-color: #10b981; color: white; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer;">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
         </div>
+    </div>
+</div>
+@endsection
+
+@section('scripts')
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const modal = document.getElementById('messageModal');
+        const closeModal = document.getElementById('closeModal');
+
+        document.querySelectorAll('.view-message-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const senderId = button.getAttribute('data-sender-id');
+                const trocId = button.getAttribute('data-troc-id');
+
+                document.getElementById('replyReceiverId').value = senderId;
+                document.getElementById('replyTrocId').value = trocId;
+
+                modal.style.display = 'flex';
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // ✅ SweetAlert pour envoi de message
+        const replyForm = document.getElementById('replyForm');
+        replyForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(replyForm);
+
+            fetch(replyForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.code === 1) {
+                    modal.style.display = 'none';
+                    replyForm.reset();
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Message envoyé',
+                        text: data.msg,
+                        showConfirmButton: false,
+                        timer: 2000
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Erreur',
+                        text: data.msg || 'Un problème est survenu'
+                    });
+                }
+            })
+            .catch(error => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Erreur serveur',
+                    text: 'Une erreur est survenue.'
+                });
+            });
+        });
+
+        // ✅ SweetAlert pour suppression de message
+        document.querySelectorAll('.delete-message-form').forEach(form => {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                Swal.fire({
+                    title: 'Supprimer ce message ?',
+                    text: "Cette action est irréversible.",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#d33',
+                    cancelButtonColor: '#3085d6',
+                    confirmButtonText: 'Oui, supprimer',
+                    cancelButtonText: 'Annuler'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        form.submit();
+                    }
+                });
+            });
+        });
+    });
+</script>
 @endsection

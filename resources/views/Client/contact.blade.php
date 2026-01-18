@@ -1,7 +1,7 @@
 @extends('layouts.client')
 @section('content')
 
-<div id="banner-area" class="banner-area" style="background-image:url({{asset('client/images/banner/banner1.jpg')}})">
+<div id="banner-area" class="banner-area" style="background-image:url({{asset('client/images/bgb.png')}})">
   <div class="banner-text">
     <div class="container">
         <div class="row">
@@ -14,7 +14,6 @@
     </div>
   </div>
 </div>
-
 
 
 <section id="main-container" class="main-container">
@@ -32,7 +31,7 @@
             <i class="fas fa-map-marker-alt mr-0"></i>
           </span>
           <div class="ts-service-box-content">
-            <h4>Rendez nous visite</h4>
+            <h4>Rejoignez nous</h4>
             <p>Lomé, TOGO</p>
             <a href="#" class="btn btn-primary">Localisation</a>
           </div>
@@ -45,8 +44,8 @@
           </span>
           <div class="ts-service-box-content">
             <h4>Ecrivez nous</h4>
-            <p>alipatrick7@gmail.com</p>
-            <a class="btn btn-primary" href="mailto:alipatrick7@gmail.com">Email</a>
+            <p>contact@apv-togo.org</p>
+            <a class="btn btn-primary" href="mailto:contact@apv-togo.org">Email</a>
           </div>
         </div>
       </div>
@@ -57,8 +56,8 @@
           </span>
           <div class="ts-service-box-content">
             <h4>Appellez nous</h4>
-            <p>(+228) 90612190</p>
-            <a class="btn btn-primary"  href="tel:90612190">Téléphone</a>
+            <p>(+228) 92939310</p>
+            <a class="btn btn-primary"  href="tel:+22892939310">Téléphone</a>
           </div>
         </div>
       </div>

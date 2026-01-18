@@ -1,118 +1,139 @@
-@extends('layouts.client')
+@extends('layouts.client') 
 @section('content')
 
-<div id="banner-area" class="banner-area" style="background-image:url({{asset('client/images/banner/banner1.jpg')}})">
-  <div class="banner-text">
-    <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-              <div class="banner-heading">
-                <h1 class="banner-title">Rechercher</h1>
-              </div>
-          </div>
-        </div>
-    </div>
+<!-- BANNIÈRE -->
+<div class="banner-area text-center text-white" style="background: linear-gradient(to right, #28A745, #FFFFFF); padding: 100px 0;">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Trouvez votre Troc idéal</h1>
+    <p class="lead" style="color:#000;">Explorez les offres d’échange les plus intéressantes près de chez vous</p>
   </div>
 </div>
 
+<!-- CONTENU PRINCIPAL -->
+<!-- CONTENU PRINCIPAL -->
+<section class="py-5" style="background: linear-gradient(to right, #f9fafc, #edf2f7);">
+  <div class="container">
 
-
-<section id="project-area" class="project-area solid-bg">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-lg-12">
-                <h2 class="section-title">explorez (le troc dans les années 1800)</h2>
-                <h3 class="section-sub-title">Rechercher un troc</h3>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12">
-                <div class="shuffle-btn-group">
-                    <!-- Vos boutons de filtre ici -->
-                </div>
-            </div>
-        </div>
-
-        <div class="row shuffle-wrapper">
-            <div class="col-1 shuffle-sizer"></div>
-            @foreach ($troc->take(12) as $troc)
-            <!-- Premier élément -->
-            <div class="col-lg-3 col-md-4 col-sm-6 shuffle-item" data-groups='["government","healthcare"]'>
-                <div class="project-img-container">
-                    <a class="gallery-popup" href="{{ asset('/articlesImages/' . $troc->image) }}">
-                        <img class="img-responsive" src="{{ asset('/articlesImages/' . $troc->image) }}" alt="project-image" style="width: 200px; height: 200px;">
-                        <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-                    </a>
-                    <div class="project-item-info">
-                        <div class="project-item-info-content">
-                            <h5 class="project-item-title" style="font-size: 16px;">
-                                <a href="details.html" style="margin-top:-15px; max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; display: block;">{{ $troc->nom }}</a>
-                            </h5>
-                            <div style="display: flex; max-width: 100%; text-overflow: ellipsis; display: block;">
-                                <p class="project-cat">{{ $troc->typeTroc }}</p>
-                                &nbsp;
-                                <span class="project-date" style="color: #ffb600;">{{ $troc->date }}</span>
-                            </div>
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#messageModal" data-image="{{ asset('/articlesImages/' . $troc->image) }}" style="margin-top:-10px;">
-                                {{-- <i class="fa fa-envelope"></i> --}}
-                                Message
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Description avec hauteur maximale -->
-                <p class="project-description" style="margin-top: 10px; text-align: center; background-color: #f0f0f0; padding: 10px; max-height: 100px; overflow: hidden;">
-                    {{ $troc->description }}
-                </p>
-            </div>
-            <!-- shuffle item 1 end -->
-            @endforeach
-            <!-- shuffle end -->
-        </div>
-
-        <!-- Modal commun pour envoyer un message -->
-        <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="messageModalLabel">Envoyer un message</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <img id="modal-image" class="img-fluid" src="" alt="project-image">
-                        <div class="form-group">
-                            <label for="message">Message :</label>
-                            <textarea class="form-control" id="message" rows="4"></textarea>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                        <button type="button" class="btn btn-primary">Envoyer</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        {{-- <div class="col-12">
-            <div class="general-btn text-center">
-                <a class="btn btn-primary" href="#">Voir plus</a>
-            </div>
-        </div> --}}
-        <!-- Ajoutez ces boutons "Suivant" et "Précédent" sous la section de publications -->
-        <div class="row">
-            <div class="col-12 text-center">
-                <button class="btn btn-primary" id="prevPage">Précédent</button>
-                <button class="btn btn-primary" id="nextPage">Suivant</button>
-            </div>
-        </div>
-
+    <!-- RECHERCHE -->
+    <div class="row justify-content-between align-items-center mb-5">
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-0" style="font-size: 30px;">Résultats de recherche</h2>
+      </div>
+      <div class="col-md-6">
+        <form method="GET" action="{{ route('BIENS') }}">
+          <div class="input-group shadow-sm rounded overflow-hidden">
+            <input type="text" name="q" class="form-control border-0" placeholder="Rechercher un mot clé..." value="{{ request('q') }}">
+            <button type="submit" class="btn btn-primary px-4 text-white">Rechercher</button>
+          </div>
+        </form>
+      </div>
     </div>
+
+    <!-- GRILLE DES TROCS -->
+    <div class="row gx-4">
+      @forelse ($troc as $t)
+      <div class="col-lg-4 col-md-6 mb-5" data-aos="fade-up">
+        <div class="card troc-card border-0 bg-white glass-card h-100">
+          <div class="card-img-top-wrapper">
+            <img src="{{ asset('/articlesImages/' . $t->image) }}" class="card-img-top" alt="Image de troc">
+          </div>
+          <div class="card-body d-flex flex-column px-4 py-3">
+            <small class="text-muted mb-2">Publié le {{ $t->created_at->translatedFormat('d F Y') }}</small>
+            <h5 class="card-title mb-2">
+              <a href="{{ route('DETAILS', $t) }}" class="text-decoration-none text-primary fw-semibold">{{ $t->nom }}</a>
+            </h5>
+            <p class="card-text text-muted mb-3" style="font-size: 15px; max-height: 60px; overflow: hidden;">{{ $t->description }}</p>
+            <a href="{{ route('DETAILS', $t) }}" class="btn btn-outline-primary btn-sm mt-auto rounded-pill">Voir les détails</a>
+          </div>
+        </div>
+      </div>
+      @empty
+      <div class="col-12 text-center">
+        <div class="alert alert-secondary shadow-sm">
+          Aucun troc correspondant n’a été trouvé.
+        </div>
+      </div>
+      @endforelse
+    </div>
+
+    <!-- PAGINATION -->
+    
+
+  </div>
 </section>
 
 
-<!-- Biens end -->
+<!-- STYLES -->
+<style>
+  .btn-gradient {
+    background: linear-gradient(to right, #667eea, #764ba2);
+    border: none;
+  }
+
+  .btn-gradient:hover {
+    background: linear-gradient(to right, #5a67d8, #6b46c1);
+  }
+
+  .glass-card {
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+
+  .glass-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  }
+
+  .card-img-top-wrapper {
+    height: 220px;
+    overflow: hidden;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .card-img-top-wrapper:hover .card-img-top {
+    transform: scale(1.07);
+  }
+
+  .pagination .page-link {
+    color: #333;
+    border: none;
+    background-color: transparent;
+    margin: 0 4px;
+    font-weight: 500;
+  }
+
+  .pagination .page-item.active .page-link {
+    background-color: #667eea;
+    color: white;
+    border-radius: 8px;
+  }
+
+  .pagination .page-item .page-link:hover {
+    background-color: #e2e8f0;
+    border-radius: 8px;
+  }
+
+  .troc-card {
+    transition: all 0.3s ease-in-out;
+  }
+</style>
+
+<!-- LIBRAIRIE AOS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true });
+</script>
 
 @endsection
