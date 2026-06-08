@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   
   <!-- CSS -->
-  @vite('resources/css/app.css')
+  {{-- @vite('resources/css/app.css') --}}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <link rel="stylesheet" href="{{ asset('admin/css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ asset('admin/font-awesome-4.7.0/css/font-awesome.min.css') }}">
